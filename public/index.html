@@ -217,14 +217,16 @@
         btn.addEventListener("click", e =>{
             e.preventDefault()
             console.log(body)
-            fetch(`/submit?auteur=${body.auteur}&img=${body.img}&email=${btn.parentElement.querySelector(".email").value}`, {
+
+            fetch(
+                `/submit?auteur=${body.auteur}&img=${body.img}&email=${btn.parentElement.querySelector(".email").value}`, 
+                {
                     method: "POST"
-            }).then(res => res.json().then(data => {
-                if(data.error){
-                    alert(data.error)
-                }else {
-                    window.location.href = data.redirect
-                }
+                })
+                .then(res => res.json().then(data => {
+                    if(data.error) alert(data.error)
+                    
+                    else window.location.href = data.redirect
             }))
         })
     </script>    
