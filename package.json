@@ -5,7 +5,8 @@
     "dotenv": "^16.0.0",
     "email-validator": "^2.0.4",
     "express": "^4.17.3",
-    "mongodb": "^4.5.0"
+    "mongodb": "^4.5.0",
+    "node-cache": "^5.1.2"
   },
   "name": "nabheni-vote",
   "version": "1.0.0",
